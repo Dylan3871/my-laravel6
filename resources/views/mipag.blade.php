@@ -11,6 +11,14 @@
 
     </head>
     <body>
-       <H1>Hola mundo DSM-41</H1>
+        <!--section define una seccion de contenido -->
+   
+
+    <div class="container">
+<!-- yield es utilizada para mostrar contenido de la seccion determinada -->
+Esto es un texto plano------
+este es mi contenido desde mi louyat master mi pag
+
+    </div>
     </body>
 </html>

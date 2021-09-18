@@ -22,3 +22,7 @@ Route::get('/',function () {
 Route::get('/producto',function () {
     return view('productos/producto');
 });
+//Ruta de blade
+Route::get('/miprimerl',function () {
+    return view('child');
+});
