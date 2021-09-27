@@ -4,10 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Category extends Model
+class Tags extends Model
 {
-    //
+    //declaramos nustro campos de tabla tags
     protected $fillable = [
-        'nombre'
-    ]
+        'nombre',
+    ];
 }

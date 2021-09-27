@@ -1,6 +1,8 @@
 <?php
-
+use App\Tags;
+use App\Images;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\BD;
 
 class DatabaseSeeder extends Seeder
 {
@@ -11,6 +13,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+
+ /*definir cantidad de registros que vamos a insertat*/
+ $cantidadTags = 200;
+ $cantidadImages = 400;
+ //hacemos la llamada a nustro factory de tags y usamos el metodo create para insertar cantidad de datos a nstra base de datos//
+factory(Tags::class,$cantidadTags)->create();
+factory(Images::class,$cantidadImages)->create();
+// $this->call(UsersTableSeeder::class);
     }
 }

@@ -14,16 +14,17 @@ class CreateArticlesTable extends Migration
     public function up()
     {
         Schema::create('articles', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('title');
-            $table->string('img');
-            $table->string('subtitle');
-            $table->text('body');
+            $table->increments('id','40');
+            $table->string('title','255');
+            $table->string('img','150');
+            $table->string('subtitle','150');
+            $table->text('body','200');
             //declaracio de llaves foraneas//
-            $table->unsignedInteger('category_id')->usigned();
+            $table->integer('category_id')->usigned();
             $table->foreign('category_id')->references('id')->on('category');
-
-            $table->timestamps();
+            $table->foreign('img_id')->unsigned();
+            $table->foreign('img_id')->references('id')->on('images');
+             $table->timestamps();
         });
     }
 
