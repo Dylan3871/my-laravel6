@@ -4,20 +4,19 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>DSM-41</title>
+        <title>@yield('title')</title>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
-
+       
     </head>
     <body>
-        <!--section define una seccion de contenido -->
-   
+    <!-- Section define una secccion de un contenido -->
+    @section('sidebar')
+
+    modifique mi siderbar desde mi layout
 
     <div class="container">
-<!-- yield es utilizada para mostrar contenido de la seccion determinada -->
-Esto es un texto plano------
-este es mi contenido desde mi louyat master mi pag
+    <!-- Yield es utilizada para mostrar contenido de una seccion determinada -->
+         mi contenido desde mi layot master mipag
 
     </div>
     </body>
