@@ -19,11 +19,19 @@ class CategoryController extends Controller
 
 
     }
-    public function store(){
+    /* insertar datos en la tabla category con el metodo create dentro de un array  */
+    public function store(Request $request){
+        Category::create([
 
+            'name'=>$request->name
+        ]);
+        return back();
 
     }
-    public function delete(){
+    public function delete(Category $category){
+
+        $category->delete();
+        return back();
 
 
     }

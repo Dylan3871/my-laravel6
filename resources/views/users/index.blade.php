@@ -29,9 +29,17 @@
                       <td>{{$user->id}}</td>
                       <td>{{$user->name}}</td>
                       <td>{{$user->email}}</td>
-                      <td><butto class="btn btn-primary">Editar</butto>
-                            <butto class="btn btn-danger">Eliminar</butto>
-                        </td>
+                      <td>
+                        <form action="{{ route('user.destroy', $user) }}" method="POST">
+                          @method('DELETE')
+                          @csrf
+                          <input 
+                          type="submit"
+                          value="Eliminar" 
+                          class="btn btn-sm btn-danger"
+                          onClick="return confirm('estas seguro  a eliminar el registro?')">
+                      </form>
+                      </td>
                   </tr>
                   @endforeach
               </tbody>

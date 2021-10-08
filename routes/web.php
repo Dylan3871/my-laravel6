@@ -16,12 +16,16 @@
 /* index lista */
 Route::get('/', 'UserController@index');
 /* store guarda datos en BD */
-Route::post('/users', 'UserController@store')->name('users.store');
+Route::post('/users', 'UserController@store')->name('user.store');
 /* Delete elima datos */
-Route::delete('/users/{user}' ,'UserController@delete')->name('users.destroy');
+Route::delete('/users/{user}' ,'UserController@delete')->name('user.destroy');
 
 /* Categorias */
 
 Route::get('/category','CategoryController@index');
 Route::post('/categories','CategoryController@store')->name('category.store');
 Route::delete('/categories/{category}','CategoryController@delete')->name('category.destroy');
+
+/* Articulos */
+
+Route::post('/articles','ControllerArticle@store')->name('article.store');
