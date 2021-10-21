@@ -20,11 +20,12 @@ class UserController extends Controller
     public function store(){
 
     }
+    /* metododo delete */
     public function delete(User $user){
 
         $user->delete();
 
-        return back();
+        return (' el usuario se ha eliminado de manera correcta');
 
     }
 

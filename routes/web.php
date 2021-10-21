@@ -17,6 +17,7 @@
 Route::get('/', 'UserController@index');
 /* store guarda datos en BD */
 Route::post('/users', 'UserController@store')->name('user.store');
+
 /* Delete elima datos */
 Route::delete('/users/{user}' ,'UserController@delete')->name('user.destroy');
 
@@ -29,3 +30,8 @@ Route::delete('/categories/{category}','CategoryController@delete')->name('categ
 /* Articulos */
 
 Route::post('/articles','ControllerArticle@store')->name('article.store');
+
+
+/*  Images */
+
+Route::post('/images', 'ImagesController@store')->name('images.store');

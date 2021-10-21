@@ -21,10 +21,12 @@ class CreateArticlesTable extends Migration
             $table->text('body','102');
         //declaracion de llaves foraneas
             $table->integer('category_id')->unsigned();
-            $table->foreign('category_id')->references('id')->on('categories');
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
             $table->integer('img_id')->unsigned();
-            $table->foreign('img_id')->references('id')->on('images');
+            $table->foreign('img_id')->references('id')->on('images')->onDelete('cascade');
             $table->timestamps();
+            $table->softDeletes();
+
         });
     }
 

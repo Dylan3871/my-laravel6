@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 /* Mandamos a llamar el modelo category */
 use App\category;
 use Illuminate\Http\Request;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class CategoryController extends Controller
 {
+    use SoftDeletes;
     //
     /* vamos a obtener todas las categorua de nuestra base de datos ELOQUEN ORM
         Select * from categories  */
@@ -28,6 +30,7 @@ class CategoryController extends Controller
         return back();
 
     }
+    /* eliminacion de */
     public function delete(Category $category){
 
         $category->delete();

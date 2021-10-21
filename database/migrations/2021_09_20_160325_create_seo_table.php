@@ -21,8 +21,9 @@ class CreateSeoTable extends Migration
             //declaracion de llaves foraneas
             $table->unsignedBigInteger('tag_id');
             $table->foreign('tag_id')->references('id')->on('tags');
-
             $table->timestamps();
+            $table->softDeletes();
+
         });
     }
 

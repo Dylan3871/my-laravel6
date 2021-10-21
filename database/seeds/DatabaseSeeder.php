@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
       /* definis la cantidad de registros que vamos a inserta en la BD */
-      $cantidadImages = 300; 
+      $cantidadImages = 500; 
       /* Hacemos la llamada a nuestro factory de tags y utilizamos el metodo create para inserta la cantidad
       de datos a nuestra BD */
           factory(Images::class,$cantidadImages)->create();
