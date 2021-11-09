@@ -8,6 +8,10 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class CategoryController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     use SoftDeletes;
     //
     /* vamos a obtener todas las categorua de nuestra base de datos ELOQUEN ORM

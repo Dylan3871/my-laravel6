@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 class ControllerArticle extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +17,7 @@ class ControllerArticle extends Controller
      */
     public function index()
     {
-        //
+
         $articles = Article::all();
         return view('articles.index',[
             'articles'=> $articles

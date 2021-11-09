@@ -6,7 +6,12 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    //
+    // proteger rutas con un constructor auth
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 /* metod index user */
     public function index(){
 
@@ -14,7 +19,7 @@ class UserController extends Controller
         return view('users.index',[
             'users' => $users
         ]);
-        return back(); 
+        return back();
 
     }
     public function store(){

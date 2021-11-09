@@ -14,9 +14,7 @@
 
 /* USUARIOS */
 /* index lista */
-Route::get('/', function(){
-    return view('index');
-});
+
 /* Usuarios*/
 /* get obtenemos los  datos en BD del usuario con la funcion index*/
 Route::get('/users','UserController@index');
@@ -40,3 +38,12 @@ Route::post('/articles','ControllerArticle@store')->name('article.store');
 /*  Images */
 
 Route::post('/images', 'ImagesController@store')->name('images.store');
+/* Auth Routes */
+Auth::routes();
+
+Route::get('/', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+
+Route::get('/home', 'HomeController@index')->name('home');

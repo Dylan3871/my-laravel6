@@ -21,6 +21,8 @@
     <link id="pagestyle" href="{{{url('assets/css/material-dashboard.css')}}}?v=3.0.0" rel="stylesheet" />
     <title>Wordpres Laravel</title>
 </head>
+<body class="g-sidenav-show  bg-gray-200">
+
     @include('Layout/header')
 
     @yield('content')
