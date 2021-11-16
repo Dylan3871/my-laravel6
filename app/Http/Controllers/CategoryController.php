@@ -31,7 +31,7 @@ class CategoryController extends Controller
 
             'name'=>$request->name
         ]);
-        return back();
+        return redirect('/category')->with('mesage', 'la categoria se ha agregado exitosamente!');
 
     }
     /* eliminacion de */

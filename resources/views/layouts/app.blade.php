@@ -29,7 +29,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar-expand-md navbar-light bg-primary shadow-sm">
               {{--   <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a> --}}
@@ -79,9 +79,8 @@
             </div>
         </nav>
 
-        <main class="py-4">
             @yield('content')
-        </main>
+    </div>
        <!--   Core JS Files   -->
   <script src={{{url('assets/js/core/popper.min.js')}}}></script>
   <script src={{{url('assets/js/core/bootstrap.min.js')}}}></script>
