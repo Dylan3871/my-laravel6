@@ -64,7 +64,15 @@ class ControllerArticle extends Controller
      */
     public function show($id)
     {
-        //
+        //obtines el article 
+        $article = Article::find($id);
+
+        return $article;
+
+        return view('article.show',[
+            '$articel' => $article
+        ]);
+
     }
 
     /**

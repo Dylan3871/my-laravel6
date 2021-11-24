@@ -27,13 +27,14 @@ Route::delete('/users/{user}' ,'UserController@delete')->name('user.destroy');
 
 Route::get('/category','CategoryController@index');
 Route::post('/categories','CategoryController@store')->name('category.store');
+Route::get('/categories/{$id}','CategoryController@edit')->name('category.edit');
 Route::delete('/categories/{category}','CategoryController@delete')->name('category.destroy');
 
 /* Articulos */
 
 Route::get('/articles','ControllerArticle@index');
 Route::post('/articles','ControllerArticle@store')->name('article.store');
-
+Route::get('/articles/{$id}','ControllerArticle@show');
 
 /*  Images */
 
