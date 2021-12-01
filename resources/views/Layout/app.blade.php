@@ -32,6 +32,9 @@
 
     @include('Layout/footer')
 
+    <script>
+   $(#modalUpdate).show('modal');
+  </script>
 
 
     <!-- Optional JavaScript; choose one of the two! -->
@@ -66,17 +69,12 @@
     <script src="{{{url('assets/js/material-dashboard.min.js?v=3.0.0')}}}"></script>
        {{-- Modal De Categorias --}}
        <script>
-         /*SCRIP TOLTIP*/
-         var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-         var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl)
-        })
-         /*SCRIP Modal*/
         var myModal = document.getElementById('myModal')
         var myInput = document.getElementById('myInput')
-        myModal.addEventListener('shown.bs.modal', function () {
-          myInput.focus()
+    
+      myModal.addEventListener('shown.bs.modal', function () {
+        myInput.focus()
       })
- 
+      </script>
 </body>
 </html>

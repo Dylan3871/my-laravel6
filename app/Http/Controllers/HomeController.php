@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-/* mandamos a llamar a nuestro modelos */
 use App\User;
 use App\Category;
 use App\Images;
@@ -17,7 +16,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware(['auth','verified']);
     }
 
     /**
@@ -27,7 +26,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        /* obtenemos nuestros usuarios con el metodo count */
         $users = User::count();
         $categoryes = Category::count();
         $images = Images::count();

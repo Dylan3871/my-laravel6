@@ -81,7 +81,7 @@
                       <td>
                         <button type='button' class="btn btn-sm btn-primary"><i class="far fa-eye"></i></button>
                         <a type="button" href="{{route('category.edit',$category->id) }}" class="btn btn-sm  btn-success" 
-                          data-bs-toggle="modal" data-bs-target="#modalUpdate{{$category->id}}"><i class="fas fa-pen-square"></i></a>
+                          data-bs-toggle="modal" data-bs-target="#modalUpdate"><i class="fas fa-pen-square"></i></a>
                         <form action="{{ route('category.destroy', $category) }}" method="POST">
                           @method('DELETE')
                           @csrf
@@ -90,15 +90,16 @@
                         <i class="far fa-trash-alt"></i>
                       </button>           
                     </form>
-
                     </td>
                   </tr>
                   @endforeach
                 </tbody>
 
           </table>
-          {{$categories->links()}}         <!-- Modal edit  STAR-->
-          <div class="modal fade" id="modalUpdate{{$category->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          {{-- renderear  el metodo paginate --}}
+          {{$categories->links()}}         
+          <!-- Modal edit  STAR-->
+          <div class="modal fade" id="modalUpdate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">  
                 <div class="modal-header">
@@ -127,8 +128,4 @@
                       <!-- Modal edit  END  -->
       </div>
   </div> 
-
     @endsection
-  
-
-  

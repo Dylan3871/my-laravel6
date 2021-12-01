@@ -34,14 +34,4 @@ class Article extends Model
         return $this->hasMany('App\Images', 'foreign_key', 'img_id');
     }
 
-     /**
-    * Get the user that owns the Article
-    *
-    * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-    */
-   public function user(): BelongsTo
-   {
-       return $this->belongsTo(User::class);
-   }
-
 }

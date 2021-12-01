@@ -18,8 +18,7 @@ class ControllerArticle extends Controller
     public function index()
     {
 
-        $articles = Article::latest()->paginate();
-        //return $articles;
+        $articles = Article::all();
         return view('articles.index',[
             'articles'=> $articles
             ]);
@@ -33,7 +32,7 @@ class ControllerArticle extends Controller
      */
     public function create()
     {
-        return view ('Articles.add');
+        return view('Articles.add');
     }
 
     /**
@@ -97,8 +96,13 @@ class ControllerArticle extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
-        //
-    }
+    /* eliminacion de */
+    public function delete(Article $articles){
+        
+        $articles->delete();
+        return redirect('/articles')->with('mesageDelete', 'El articulo se ha eliminado exitosamente!');
+        
+        
+        
+        }
 }

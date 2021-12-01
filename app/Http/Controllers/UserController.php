@@ -15,7 +15,8 @@ class UserController extends Controller
 /* metod index user */
     public function index(){
 
-        $users = User::all();
+        $users = User::latest()->paginate();
+        //return $users;
         return view('users.index',[
             'users' => $users
         ]);
@@ -25,13 +26,14 @@ class UserController extends Controller
     public function store(){
 
     }
-    /* metododo delete */
-    public function delete(User $user){
-
-        $user->delete();
-
-        return (' el usuario se ha eliminado de manera correcta');
-
-    }
+    /* eliminacion de */
+    public function delete(User $users){
+        
+        $users->delete();
+        return redirect('/users')->with('mesageDelete', 'El usuario se ha eliminado exitosamente!');
+        
+        
+        
+        }
 
 }

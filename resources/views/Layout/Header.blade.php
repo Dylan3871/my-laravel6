@@ -3,7 +3,7 @@
       <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
       <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/material-dashboard/pages/dashboard " target="_blank">
         <img src="./assets/img/logo-ct.png" class="navbar-brand-img h-100" alt="main_logo">
-        <span class="ms-1 font-weight-bold text-white"> AWOS DSM 41 DSAZ</span>
+        <span class="ms-1 font-weight-bold text-white"> DSM-41 "Awos"</span>
       </a>
     </div>
     <hr class="horizontal light mt-0 mb-2">
@@ -22,7 +22,7 @@
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">table_view</i>
             </div>
-            <span class="nav-link-text ms-1">Articulo</span>
+            <span class="nav-link-text ms-1">Articulos</span>
           </a>
         </li>
         <li class="nav-item">
@@ -30,7 +30,7 @@
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">receipt_long</i>
             </div>
-            <span class="nav-link-text ms-1">Categoria</span>
+            <span class="nav-link-text ms-1">Categorias</span>
           </a>
         </li>
         <li class="nav-item">
@@ -38,7 +38,7 @@
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">view_in_ar</i>
             </div>
-            <span class="nav-link-text ms-1">Usuario</span>
+            <span class="nav-link-text ms-1">Usuarios</span>
           </a>
         </li>
         <li class="nav-item">
@@ -54,18 +54,18 @@
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">notifications</i>
             </div>
-            <span class="nav-link-text ms-1">Notifications</span>
+            <span class="nav-link-text ms-1">Notificaciones</span>
           </a>
         </li>
         <li class="nav-item mt-3">
-          <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Account pages</h6>
+          <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Paginas de la Cuenta</h6>
         </li>
         <li class="nav-item">
           <a class="nav-link text-white " href="./pages/profile.html">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">person</i>
             </div>
-            <span class="nav-link-text ms-1">Profile</span>
+            <span class="nav-link-text ms-1">Perfil</span>
           </a>
         </li>
         <li class="nav-item">
