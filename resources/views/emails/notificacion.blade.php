@@ -6,7 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    h1{
+        color: blue; 
+    }
+</style>
+</head>
+
+
 <body>
-    <h3>Plantilla de correo desde el laboratorio en laravel con mailtrap</h3>
+    <h1>Plantilla de correo desde el laboratorio en laravel con mailtrap</h1>
 </body>
 </html>
