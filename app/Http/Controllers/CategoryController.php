@@ -35,6 +35,7 @@ class CategoryController extends Controller
     /* Updete Category */
         public function edit($id){
             $categery = Category::findOrFaild($id);
+    
 
             return view('category/', compact('category','user'));
             

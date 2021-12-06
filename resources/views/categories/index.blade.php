@@ -113,7 +113,7 @@
                       {{-- generar el token para el envio de dato csrf --}}
                       {{ csrf_field() }} 
                         <label class= "col" for="">Nombre Categoria:</label>
-                        <input class="col from-control" type="text" name="name" placeholder="Deportes" value={{$category->name}}>
+                        <input class="col from-control" type="text" name="name" placeholder="" value={{$category->name}}>
               </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>

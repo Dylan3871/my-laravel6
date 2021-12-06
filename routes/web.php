@@ -23,6 +23,7 @@ Route::get('/category','CategoryController@index');
 Route::post('/categories','CategoryController@store')->name('category.store');
 Route::get('/categories/{$id}','CategoryController@edit')->name('category.edit');
 Route::delete('/categories/{category}','CategoryController@delete')->name('category.destroy');
+
 /* Articulos */
 
 Route::get('/articles','ControllerArticle@index');
@@ -62,3 +63,6 @@ Auth::routes(['verify' => true]);
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+/*vista*/
+
