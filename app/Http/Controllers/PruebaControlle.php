@@ -1,15 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Article;
+
 use Illuminate\Http\Request;
 
-class ControllerArticle extends Controller
+class PruebaControlle extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware(['auth','verified']);
-    }
     /**
      * Display a listing of the resource.
      *
@@ -17,12 +13,7 @@ class ControllerArticle extends Controller
      */
     public function index()
     {
-
-        $articles = Article::all();
-        return view('articles.index',[
-            'articles'=> $articles
-            ]);
-
+        //
     }
 
     /**
@@ -32,7 +23,7 @@ class ControllerArticle extends Controller
      */
     public function create()
     {
-        return view('Articles.add');
+        //
     }
 
     /**
@@ -44,16 +35,6 @@ class ControllerArticle extends Controller
     public function store(Request $request)
     {
         //
-
-        Article::create([
-        'title'=>$request->title,
-        'img'=>$request->img,
-        'subtitle'=>$request->subtitle,
-        'body'=>$request->body,
-        'category_id'=>$request->category_id,
-        'img_id'=>$request->img_id
-        ]);
-        return ('el article se dio de alta de manera correcta');
     }
 
     /**
@@ -96,13 +77,8 @@ class ControllerArticle extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    /* eliminacion de */
-    public function delete(Article $articles){
-        
-        $articles->delete();
-        return redirect('/articles')->with('mesageDelete', 'El articulo se ha eliminado exitosamente!');
-        
-        
-        
-        }
+    public function destroy($id)
+    {
+        //
+    }
 }

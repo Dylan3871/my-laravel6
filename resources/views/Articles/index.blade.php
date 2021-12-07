@@ -1,3 +1,4 @@
+
 @extends('Layout/app')
 @section('content')
 <div class="panel-body">
@@ -48,6 +49,7 @@
                 </tr>
                 @endforeach
             </tbody>
+
         </table>
          </div>
     </div> 

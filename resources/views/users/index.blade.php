@@ -1,13 +1,5 @@
 @extends('Layout/app')
 @section('content')
-@if (session('mesage'))
-      <div class="alert alert-info alert-dismissible text-white" role="alert">
-        <span class="text-sm"> <a href="javascript:;" class="alert-link text-white">Excelente</a>. {{ session('mesage') }}.</span>
-        <button type="button" class="btn-close text-lg py-3 opacity-10" data-bs-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      @endif
 <div class="container-fluid py-4">
     <div class="row">
       <div class="col-12">
@@ -48,7 +40,7 @@
                 </tr>
                 @endforeach
             </tbody>
-          {{$users->links()}}
+
         </table>
     </div>
 </div>

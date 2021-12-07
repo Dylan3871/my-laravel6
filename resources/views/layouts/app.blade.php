@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-<script src="https://kit.fontawesome.com/146ffc4004.js" crossorigin="anonymous"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
  <!-- Nucleo Icons -->
@@ -11,6 +10,18 @@
  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
  <!-- Material Icons -->
  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+ <!-- CDN QUILL RICH -->
+ <!-- Main Quill library -->
+<script src="//cdn.quilljs.com/1.3.6/quill.js"></script>
+<script src="//cdn.quilljs.com/1.3.6/quill.min.js"></script>
+
+<!-- Theme included stylesheets -->
+<link href="//cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+<link href="//cdn.quilljs.com/1.3.6/quill.bubble.css" rel="stylesheet">
+
+<!-- Core build with no theme, formatting, non-essential modules -->
+<link href="//cdn.quilljs.com/1.3.6/quill.core.css" rel="stylesheet">
+<script src="//cdn.quilljs.com/1.3.6/quill.core.js"></script>
  <!-- CSS Files -->
  <link id="pagestyle" href="{{{url('assets/css/material-dashboard.css')}}}?v=3.0.0" rel="stylesheet" />
     <!-- CSRF Token --> 
@@ -88,6 +99,14 @@
   <script src={{{url('assets/js/plugins/perfect-scrollbar.min.js')}}}></script>
   <script src={{{url('assets/js/plugins/smooth-scrollbar.min.js')}}}></script>
   <script src={{{url('assets/js/plugins/chartjs.min.js')}}}></script>
+  <!-- Include the Quill library -->
+<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+
+<!-- Initialize Quill editor -->
+<!-- Initialize Quill editor -->
+
+<script src="https://cdn.ckeditor.com/4.17.1/standard/ckeditor.js"></script>
+
     <script>
         var win = navigator.platform.indexOf('Win') > -1;
         if (win && document.querySelector('#sidenav-scrollbar')) {
@@ -100,6 +119,8 @@
     <!-- Github buttons -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
-    <script src="{{{url('assets/js/material-dashboard.min.js?v=3.0.0')}}}></script>
+    <script src="{{{url('assets/js/material-dashboard.min.js?v=3.0.0')}}}"></script>
+
+    
 </body>
 </html>

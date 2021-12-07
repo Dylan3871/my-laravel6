@@ -10,13 +10,12 @@ class UserController extends Controller
 
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware(['auth','verified']);
     }
 /* metod index user */
     public function index(){
 
-        $users = User::latest()->paginate();
-        //return $users;
+        $users = User::all();
         return view('users.index',[
             'users' => $users
         ]);
@@ -26,14 +25,13 @@ class UserController extends Controller
     public function store(){
 
     }
-    /* eliminacion de */
-    public function delete(User $users){
-        
-        $users->delete();
-        return redirect('/users')->with('mesageDelete', 'El usuario se ha eliminado exitosamente!');
-        
-        
-        
-        }
+    /* metododo delete */
+    public function delete(User $user){
+
+        $user->delete();
+
+        return (' el usuario se ha eliminado de manera correcta');
+
+    }
 
 }

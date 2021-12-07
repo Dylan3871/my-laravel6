@@ -7,7 +7,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class User extends Authenticatable implements MustVerifyEmail
+class User extends Authenticatable  implements MustVerifyEmail
 {
     use SoftDeletes;
     use Notifiable;
@@ -42,5 +42,9 @@ class User extends Authenticatable implements MustVerifyEmail
     public function roles(){
 
         return $this->belongsToMany('App\Roles'); 
+    }
+
+    public function article(){
+        return $this->hasMany(Articles::class);
     }
 }

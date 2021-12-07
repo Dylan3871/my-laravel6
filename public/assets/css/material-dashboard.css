@@ -17532,3 +17532,19 @@ pre[class*="language-"] {
     overflow: auto !important; } }
 
 /*# sourceMappingURL=material-dashboard.css.map */
+.inputborder{
+  border-radius: 2px !important;  
+}
+
+#wrapper
+{
+ text-align:center;
+ margin:0 auto;
+ padding:0px;
+ width:0 auto;
+}
+#output_image
+{
+ max-width:200px;
+ max-height:200px;
+}
